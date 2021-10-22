@@ -13,5 +13,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/quotes', quotesController.getQuotes);
+app.post('/api/quotes', quotesController.saveQuote);
+app.put('/api/quotes/:quoteId', quotesController.updateQuoteById);
+app.delete('/api/quotes/:quoteId', quotesController.deleteQuoteById);
 
 module.exports = app;
